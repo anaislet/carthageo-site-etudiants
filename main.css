@@ -1,0 +1,350 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'IBM Plex Serif', serif;
+	font-size: 16px;
+}
+
+html
+{
+	background-color: #EEEEEE;
+}
+
+body
+{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/****************************************************** Header - Nav */
+header #banniere
+{
+	position: relative;
+	background-image: url('banniere.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+}
+
+header h1
+{
+    font-family: 'Quicksand', sans-serif;
+	font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+	color: #0F044C;
+	text-shadow: 1px 1px 2px rgb(20, 30, 97);
+	padding: 0 15px;
+}
+
+nav
+{
+	background-color: #0F044C;
+	margin: 15px auto 30px auto;
+	padding: 10px 0;
+}
+
+nav ul
+{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+nav ul li a
+{
+	color: #EEEEEE;
+    font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav ul li.pagecourante a
+{
+	font-weight: bold;
+}
+
+nav ul li a:hover
+{
+	text-decoration: underline;
+}
+
+/****************************************************** section */
+
+section.accueil
+{
+    position: relative;
+    padding: 55px 0 0 50px;
+	margin-bottom: 25px;
+}
+section.accueil:nth-child(even) { padding: 55px 50px 0 0; }
+
+section#travaux, section#entretiens
+{
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*************************************************** section div */
+
+section.accueil div.cercle
+{
+    height: 300px;
+    width: 300px;
+    background-color: #787A91;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    z-index: -10;
+}
+section.accueil:nth-child(odd) div.cercle { left: 0; }
+section.accueil:nth-child(even) div.cercle { right: 0; }
+
+section#travaux div.travail, section#entretiens div.entretien
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 250px;
+    width: 300px;
+    background-color: #787A91;
+	background-image: url('carte_travaux.jpg');
+    border-radius: 15px;
+	margin-bottom: 50px;
+}
+
+section#entretiens div.entretien
+{
+	background-image: url('profil.jpg');
+	cursor: pointer;
+}
+
+section#travaux div.travail div.haut, section#entretiens div.entretien div.haut
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 40px;
+	padding: 10px 10px 10px 10px;
+	border-radius: 15px 15px 0 0;
+	background: linear-gradient(rgba(15, 4, 76, 0.5), rgba(15, 4, 76, 0));
+}
+
+section#entretiens div.entretien div.haut
+{
+	justify-content: flex-end;
+}
+
+section#travaux div.travail div.bas, section#entretiens div.entretien div.bas
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 10px 10px 10px 10px;
+	border-radius: 0 0 15px 15px;
+	height: 100px;
+	background: linear-gradient(rgba(15, 4, 76, 0), rgba(15, 4, 76, 0.7));
+}
+
+section#choisir div div.boutons
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+
+/************************************************************* section h2 */
+
+section h2
+{
+	color: #141E61;
+    font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	border-bottom: 2px solid #787A91;
+}
+
+section.accueil:nth-child(even) h2 { text-align: right; }
+
+section#travaux div.travail h2, section#entretiens div.entretien h2
+{
+	color: #EEEEEE;
+	font-size: 20px;
+}
+
+section#choisir div h2
+{
+	margin-top: 20px;
+}
+
+/********************************************************** section p */
+
+section p
+{
+	padding: 10px 10px 10px 0;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    text-align: justify;
+    color: #0F044C;
+}
+
+section.accueil p a
+{
+    font-family: 'EB Garamond', serif;
+    color: #0F044C;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+section.accueil p a:hover
+{
+	text-decoration: none;
+}
+
+section#travaux div.travail p, section#entretiens div.entretien p
+{
+	padding: 0;
+	color: #EEEEEE;
+}
+
+section#travaux div.travail div.haut p, section#entretiens div.entretien div.haut p
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 14px;
+}
+
+section#choisir div div.boutons p
+{
+	display: inline-block;
+	background-color: rgba(120, 122, 145, 0.2);
+	color: #0F044C;
+	border-radius: 10px;
+	margin: 10px 20px 0 0;
+	padding: 5px 10px;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 14px;
+    font-weight: bold;
+	cursor: pointer;
+}
+
+section#choisir div div.boutons p.actif
+{
+	background-color: rgba(15, 4, 76, 0.8);
+	color: #EEEEEE;
+}
+
+/************************************************ div.detail */
+
+section#entretiens div.detail
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(15, 4, 76, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+section#entretiens div.detail div.interview
+{
+	width: 900px;
+	height: 80%;
+	background-color: #EEEEEE;
+	overflow-y: scroll;
+}
+
+p.fermer
+{
+	background-color: #0F044C;
+	cursor: pointer;
+	color: #EEEEEE;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	text-align: end;
+}
+
+section#entretiens div.detail div.interview div.portrait
+{
+	display: flex;
+	flex-direction: row;
+}
+
+section#entretiens div.detail div.interview div.portrait img
+{
+	margin: 20px 20px 0 20px;
+	height: 300px;
+    width: 300px;
+	border-radius: 15px;
+}
+
+section#entretiens div.detail div.interview div.portrait div.experience h3
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	color: #0F044C;
+	margin: 20px 0;
+}
+
+section#entretiens div.detail div.interview div.portrait div.experience ul
+{
+	list-style: none;
+    color: #0F044C;
+    font-size: 20px;
+}
+
+section#entretiens div.detail div.interview div.portrait div.experience ul li
+{
+	margin-bottom: 10px;
+	font-family: 'EB Garamond', serif;
+}
+
+section#entretiens div.detail div.interview div.portrait div.experience ul li span
+{
+	font-family: 'EB Garamond', serif;
+	font-weight: bold;
+}
+
+section#entretiens div.detail div.interview div.questionreponse
+{
+	margin: 20px 20px 0 20px;
+	position: relative;
+}
+
+section#entretiens div.detail div.interview div.questionreponse h3
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	color: #0F044C;
+}
+
+section#entretiens div.detail div.interview div.questionreponse p
+{
+	text-align: justify;
+}
+
+section#entretiens div.detail div.interview div.piedpage
+{
+	background-color: #0F044C;
+	display:flex;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+section#entretiens div.detail div.interview div.piedpage p
+{
+	color: #EEEEEE;
+	font-family: 'Quicksand', sans-serif;
+}
+
+section#entretiens div.detail div.interview div.piedpage img
+{
+	width: 40px;
+	margin-left: 10px;
+}
